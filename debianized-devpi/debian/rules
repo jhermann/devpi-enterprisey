@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+#
+# Build Debian package using https://github.com/spotify/dh-virtualenv
+#
+# Note that this only works after applying
+#   https://github.com/spotify/dh-virtualenv/pull/43
+# (at least with some versions of virtualenv)
+
+# The below targets create a clean copy of the workdir via
+# using "sdist", else "pip" goes haywire when installing from
+# sourcedir ".", because that includes the debian build stage,
+# and a recursive explosion ensues when symlinks are followed.
+
+# Set this empty if you want to use the release version (3.2.0) of 'requests'
+REQUESTS_PROXY_FIX=--preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
+
+PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
+DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')
+DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python $(REQUESTS_PROXY_FIX) #-v
+
+clean:
+	test ! -d debian/sdist || rm -rf debian/sdist
+	-rm debian/*.tar.gz
+	dh $@ $(DH_VENV_ARGS)
+
+build-arch:
+	# TODO: This should be an orig-tarball
+	cd debian && curl -sLOkS https://pypi.python.org/packages/source/d/devpi/devpi-$(DEB_VERSION).tar.gz
+	mkdir -p debian/sdist
+	tar -xz -C debian/sdist --strip-components=1 --exclude '*.egg-info' -f debian/*.tar.gz
+	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist
+
+%:
+	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist

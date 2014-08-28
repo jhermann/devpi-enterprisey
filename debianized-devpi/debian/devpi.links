@@ -1,0 +1,2 @@
+usr/share/python/devpi/bin/devpi usr/bin/devpi
+usr/share/python/devpi/bin/devpi-server usr/sbin/devpi-server
