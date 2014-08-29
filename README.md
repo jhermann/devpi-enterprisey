@@ -20,6 +20,11 @@ servers in the contained `urllib3` vendor package.
 
 **How to build and install the package?**
 
+You need of course a machine with the build dependencies installed, specifically
+[dh-virtualenv](https://github.com/spotify/dh-virtualenv) in addition to the normal Debian packaging tools.
+Then the following commands will install a *release* version of `devpi` into `/usr/share/python/devpi/`, and place symlinks
+for `devpi` (in `bin`) and `devpi-server` (in `sbin`) into the machine's PATH.
+
 ```sh
 git clone https://github.com/jhermann/devpi-enterprisey.git
 cd devpi-enterprisey/
@@ -27,6 +32,8 @@ cd devpi-enterprisey/
 sudo dpkg -i devpi_2*.deb
 apt-cache show devpi
 ```
+
+The version of `devpi` used is determined by the top-most entry and its upstream version in the `changelog`.
 
 
 ## Related Tickets
