@@ -14,6 +14,9 @@
 # Set this empty if you want to use the release version (3.2.0) of 'requests'
 REQUESTS_PROXY_FIX=--preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
+# Add plugin packages, as a space- or comma-separated list
+DEVPI_PLUGINS="devpi-findlinks"
+
 PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
 DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')
 DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python $(REQUESTS_PROXY_FIX) #-v
@@ -28,6 +31,7 @@ build-arch:
 	cd debian && curl -sLOkS https://pypi.python.org/packages/source/d/devpi/devpi-$(DEB_VERSION).tar.gz
 	mkdir -p debian/sdist
 	tar -xz -C debian/sdist --strip-components=1 --exclude '*.egg-info' -f debian/*.tar.gz
+	echo "$(DEVPI_PLUGINS)" | tr ' ,' '\n\n' >>debian/sdist/requirements.txt
 	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist
 
 %:
