@@ -1,0 +1,5 @@
+devpi (2.0.1-4) trusty; urgency=low
+
+  * Debianized using dh-virtualenv
+
+ -- Juergen Hermann <jh@web.de>  Fri, 29 Aug 2014 17:23:12 +0200
