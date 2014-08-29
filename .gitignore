@@ -1,0 +1,6 @@
+debianized-devpi/debian/devpi.substvars
+debianized-devpi/debian/devpi/
+debianized-devpi/debian/files
+debianized-devpi/debian/sdist/
+devpi_2*.changes
+devpi_2*.deb
