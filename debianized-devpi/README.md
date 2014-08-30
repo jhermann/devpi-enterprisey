@@ -9,7 +9,7 @@ using [dh-virtualenv](https://github.com/spotify/dh-virtualenv).
 The resulting package is thus easily installed and removed from a machine, but contains no configuration,
 and is not a ‘normal’ Debian `python-*` package. If you want that, look elsewhere.
 
-The created virtualenv also contains any plugins configured in `debina/rules` — right now, that is `devpi-findlinks` by default.
+The created virtualenv also contains any plugins configured in `debian/rules` — right now, that is `devpi-findlinks` by default.
 And at the time of this writing, a development snapshot of `requests` is installed, which fixes a problem with HTTP proxy
 servers in the contained `urllib3` vendor package.
 
