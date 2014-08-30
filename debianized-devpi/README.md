@@ -30,3 +30,31 @@ apt-cache show devpi
 ```
 
 The version of `devpi` used is determined by the top-most entry and its upstream version in the `changelog`.
+
+
+## How to configure a simple "devpi" instance?
+
+Once the package is installed, use these commands as `root` to configure and start your `devpi` server:
+
+```sh
+apt-get install supervisor
+addgroup devpi
+adduser devpi --ingroup devpi --home /var/lib/devpi --system --disabled-password
+sudo -u devpi bash -c "cd /tmp && /usr/sbin/devpi-server --gen-config"
+cp /tmp/gen-config/supervisor-devpi.conf /etc/supervisor/conf.d/devpi-server.conf
+supervisorctl update
+supervisorctl tail -f devpi-server
+```
+
+Then, in a 2nd non-root shell:
+
+```sh
+devpi use "http://localhost:3141/"
+devpi login root --password=
+  devpi user -m root password=…
+devpi user -c local
+devpi login local
+devpi index -c dev
+```
+
+Finally, you can open the [web interface](http://localhost:3141/) and browse your shiny new local repositories.
