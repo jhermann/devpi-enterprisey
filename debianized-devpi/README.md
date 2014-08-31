@@ -27,6 +27,7 @@ cd devpi-enterprisey/
 ( cd debianized-devpi/ && dpkg-buildpackage -uc -us -b )
 sudo dpkg -i devpi_2*.deb
 apt-cache show devpi
+devpi --version # ensure it basically works
 ```
 
 The version of `devpi` used is determined by the top-most entry and its upstream version in the `changelog`.
@@ -59,3 +60,7 @@ devpi use dev --set-cfg # be aware this changes 'index_url' of several configs i
 ```
 
 Finally, you can open the [web interface](http://localhost:3141/) and browse your shiny new local repositories.
+
+For further details, consult devpi's
+[Release Process Quickstart](http://doc.devpi.net/latest/quickstart-releaseprocess.html)
+documentation, starting with “devpi install: installing a package”.
