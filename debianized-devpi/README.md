@@ -6,7 +6,7 @@ The Debian packaging metadata in
 [debianized-devpi/debian](https://github.com/jhermann/devpi-enterprisey/tree/master/debianized-devpi/debian)
 puts the `devpi` Python package and its dependencies into a DEB package,
 using [dh-virtualenv](https://github.com/spotify/dh-virtualenv).
-The resulting package is thus easily installed and removed from a machine, but contains no configuration,
+The resulting package is thus easily installed to and removed from a machine, but contains no configuration,
 and is not a ‘normal’ Debian `python-*` package. If you want that, look elsewhere.
 
 The created virtualenv also contains any plugins configured in `debian/rules` — right now, that is `devpi-findlinks` by default.
@@ -53,7 +53,9 @@ devpi use "http://localhost:3141/"
 devpi login root --password=
   devpi user -m root password=…
 devpi user -c local
+# … enter password
 devpi login local
+# … enter password
 devpi index -c dev
 ```
 
