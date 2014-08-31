@@ -52,12 +52,10 @@ Then, in a 2nd non-root shell:
 devpi use "http://localhost:3141/"
 devpi login root --password=
   devpi user -m root password=…
-devpi user -c local
-# … enter password
-devpi login local
-# … enter password
+devpi user -c local # … and enter password
+devpi login local # … and enter password
 devpi index -c dev
-devpi use dev --set-cfg
+devpi use dev --set-cfg # be aware this changes 'index_url' of several configs in your $HOME
 ```
 
 Finally, you can open the [web interface](http://localhost:3141/) and browse your shiny new local repositories.
