@@ -57,6 +57,7 @@ devpi user -c local
 devpi login local
 # … enter password
 devpi index -c dev
+devpi use dev --set-cfg
 ```
 
 Finally, you can open the [web interface](http://localhost:3141/) and browse your shiny new local repositories.
