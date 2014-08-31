@@ -60,7 +60,6 @@ devpi use dev --set-cfg # be aware this changes 'index_url' of several configs i
 ```
 
 Finally, you can open the [web interface](http://localhost:3141/) and browse your shiny new local repositories.
-
 For further details, consult devpi's
 [Release Process Quickstart](http://doc.devpi.net/latest/quickstart-releaseprocess.html)
-documentation, starting with “devpi install: installing a package”.
+documentation, starting with *“devpi install: installing a package.”*
