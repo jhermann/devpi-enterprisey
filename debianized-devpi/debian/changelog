@@ -1,6 +1,7 @@
 devpi (2.0.4-1) trusty; urgency=high
 
-  * Update to devpi-server 2.0.4
+  * Update: devpi-server 2.0.4
+  * Update: requests 2.4.0 (with fixed urllib3)
 
  -- Juergen Hermann <jh@web.de>  Mon, 01 Sep 2014 13:10:29 +0200
 
