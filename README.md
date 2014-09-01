@@ -19,4 +19,3 @@ This project provides the following components:
 
 * [hpk42/devpi](https://bitbucket.org/hpk42/devpi)
 * [devpi/devpi-findlinks](https://github.com/devpi/devpi-findlinks)
-* [dev snapshot of ‘requests’](https://github.com/jhermann/requests) (`proxy-fixed-for-devpi` branch, some time after v3.2.0)
