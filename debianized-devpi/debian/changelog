@@ -1,3 +1,9 @@
+devpi (2.0.4-1) trusty; urgency=high
+
+  * Update to devpi-server 2.0.4
+
+ -- Juergen Hermann <jh@web.de>  Mon, 01 Sep 2014 13:10:29 +0200
+
 devpi (2.0.1-4) trusty; urgency=low
 
   * Debianized using dh-virtualenv
