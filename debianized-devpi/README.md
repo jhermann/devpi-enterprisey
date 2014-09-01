@@ -28,7 +28,7 @@ apt-cache show devpi
 devpi --version # ensure it basically works
 ```
 
-The version of `devpi` used is determined by the top-most entry and its upstream version in the `changelog`.
+The version of `devpi` and other core components used is determined in `debian/rules`.
 
 
 ## How to configure a simple "devpi" instance?
