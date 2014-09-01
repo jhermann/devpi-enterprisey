@@ -19,3 +19,4 @@ This project provides the following components:
 
 * [hpk42/devpi](https://bitbucket.org/hpk42/devpi)
 * [devpi/devpi-findlinks](https://github.com/devpi/devpi-findlinks)
+* [devpi/devpi-ldap](https://github.com/devpi/devpi-ldap) (pre-alpha as of 2014/09)
