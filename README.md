@@ -1,5 +1,4 @@
-devpi-enterprisey
-=================
+# ![logo](https://raw.githubusercontent.com/jhermann/devpi-enterprisey/master/doc/static/logo-32.png) devpi-enterprisey
 
 Augmentation of the awesome [devpi](http://doc.devpi.net/latest/) project
 with ‘enterprisey’ requirements, configuration, and deployment.
