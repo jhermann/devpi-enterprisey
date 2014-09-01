@@ -14,6 +14,9 @@
 # Set this empty if you want to use the release version (3.2.0) of 'requests'
 REQUESTS_PROXY_FIX=--preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
+# Version of "devpi" meta package
+DEVPI_VERSION="2.0.1"
+
 # Frozen versions of sub-projects "devpi" requires
 DEVPI_FREEZE="devpi-common==2.0.0 devpi-client==2.0.1 devpi-server==2.0.4 devpi-web==2.0.1"
 
@@ -31,7 +34,7 @@ clean:
 
 build-arch:
 	# TODO: This should be an orig-tarball
-	cd debian && curl -sLOkS https://pypi.python.org/packages/source/d/devpi/devpi-$(DEB_VERSION).tar.gz
+	cd debian && curl -sLOkS https://pypi.python.org/packages/source/d/devpi/devpi-$(DEVPI_VERSION).tar.gz
 	mkdir -p debian/sdist
 	tar -xz -C debian/sdist --strip-components=1 --exclude '*.egg-info' -f debian/*.tar.gz
 	echo "$(DEVPI_FREEZE) $(DEVPI_PLUGINS)" | tr ' ,' '\n\n' >>debian/sdist/requirements.txt
