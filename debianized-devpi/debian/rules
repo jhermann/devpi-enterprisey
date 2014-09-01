@@ -11,21 +11,22 @@
 # sourcedir ".", because that includes the debian build stage,
 # and a recursive explosion ensues when symlinks are followed.
 
-# Set this empty if you want to use the release version (3.2.0) of 'requests'
-REQUESTS_PROXY_FIX=--preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
+# Packages to install before the main project
+PREINSTALL=
+# --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
-DEVPI_VERSION="2.0.1"
+DEVPI_VERSION=2.0.1
 
-# Frozen versions of sub-projects "devpi" requires
-DEVPI_FREEZE="devpi-common==2.0.0 devpi-client==2.0.1 devpi-server==2.0.4 devpi-web==2.0.1"
+# Frozen versions of "devpi" requirements
+DEVPI_FREEZE="requests==2.4.0 devpi-common==2.0.0 devpi-client==2.0.1 devpi-server==2.0.4 devpi-web==2.0.1"
 
 # Add plugin packages, as a space- or comma-separated list
 DEVPI_PLUGINS="devpi-findlinks==1.0.0"
 
 PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
 DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')
-DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python $(REQUESTS_PROXY_FIX) #-v
+DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python $(PREINSTALL) #-v
 
 clean:
 	test ! -d debian/sdist || rm -rf debian/sdist
