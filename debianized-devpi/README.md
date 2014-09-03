@@ -35,7 +35,14 @@ The version of `devpi` and other core components used is determined in `debian/r
 
 ## How to configure a simple "devpi" instance?
 
-Once the package is installed, use these commands as `root` to configure and start your `devpi` server:
+To get a running `devpi-server` instance, you need to install the package and then add the necessary configuration.
+For server installations, this can be done automatically using the
+[devpi-puppet](https://github.com/jhermann/devpi-puppet) module (see there for details).
+Otherwise, use the following instructions to do so
+– that way is most appropriate for workstation installations of a single developer.
+
+So once the package is installed as shown in the previous section,
+use these commands as `root` to configure and start your `devpi` server:
 
 ```sh
 apt-get install supervisor
