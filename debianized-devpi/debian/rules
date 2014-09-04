@@ -20,8 +20,8 @@ DEVPI_VERSION=2.0.2
 DEVPI_URL="https://pypi.python.org/packages/source/d/devpi/devpi-$(DEVPI_VERSION).tar.gz"
 
 # Use a specific repo to build the package?
-PYPI_URL="--pypi-url=https://devpi.net/hpk/dev"
-DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
+##PYPI_URL="--pypi-url=https://devpi.net/hpk/dev"
+##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
 DEVPI_FREEZE="requests==2.4.0 devpi-common==2.0.2 devpi-client==2.0.2 devpi-server==2.0.5 devpi-web==2.0.1"
