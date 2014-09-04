@@ -4,3 +4,4 @@ debianized-devpi/debian/files
 debianized-devpi/debian/sdist/
 devpi_2*.changes
 devpi_2*.deb
+devpi_2*.upload
