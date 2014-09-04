@@ -1,10 +1,9 @@
 devpi (2.0.5-1) trusty; urgency=medium
 
-  [ Juergen Hermann ]
   * Update: devpi-server 2.0.5
   * Update: devpi-client==2.0.2
 
- -- Juergen Hermann (1&1 Internet AG) <Juergen.Hermann@1und1.de>  Thu, 04 Sep 2014 17:07:27 +0200
+ -- Juergen Hermann <jh@web.de>  Thu, 04 Sep 2014 17:16:14 +0200
 
 devpi (2.0.4-1) trusty; urgency=high
 
