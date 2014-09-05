@@ -9,6 +9,26 @@ This project provides the following components:
 * *Puppet Deployment* - see the example node definition in [puppet](https://github.com/jhermann/devpi-enterprisey/tree/master/puppet) on how to install devpi-server behind a NginX proxy, using the [devpi-puppet](https://github.com/jhermann/devpi-puppet) module.
 
 
+## How-Tos
+
+### Installing the ‘devpi’ client into your home
+
+The following is an easy way to install the client on systems not derived from Debian (for Debian packaging, see above link).
+It uses [pipsi](https://github.com/mitsuhiko/pipsi) to create a dedicated virtualenv for `devpi-client`.
+
+```sh
+grep '/.local/bin:' ~/.bash_aliases >/dev/null 2>&1 ||
+    echo 'grep ":$HOME/.local/bin:" <<<":$PATH:" >/dev/null || export PATH="$HOME/.local/bin:$PATH"' >>~/.bash_aliases
+source ~/.bash_aliases
+
+which pipsi || curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+which devpi || pipsi install devpi-client
+devpi --version
+```
+
+The above command sequence is idempotent, i.e. you can repeat it as often as needed, in case of any problems.
+
+
 ## Related Tickets
 
 * [Integrate LDAP-based authentication/authorization](https://bitbucket.org/hpk42/devpi/issue/138/integrate-ldap-based-authentication)
