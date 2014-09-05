@@ -29,6 +29,25 @@ devpi --version
 The above command sequence is idempotent, i.e. you can repeat it as often as needed, in case of any problems.
 
 
+### Example for an index-per-team setup with shared global indexes
+
+The following shows how an index setup for a department with multiple teams can look like
+– it tries to strike a balance between simplicity and flexibility (i.e. independence and isolation of teams).
+
+It's designed for the following requirements:
+
+* Give each team a space to share experimental and stable releases, under their control.
+* Provide a shared package pool, which consists of local reviewed releases, external releases not available on PyPI or patched locally, and finally the local PyPI proxy/cache.
+* Releases that are not team-internal must be pushed through a QA gateway towards the shared package pool, i.e. `shared` is owned by the QA team.
+
+![Sample Index Structure](https://raw.githubusercontent.com/jhermann/devpi-enterprisey/master/doc/static/repo-structure.png)
+
+All team indexes eventually lead to `shared/stable`, a *virtual* index that is not supposed to hold any packages,
+but only assemble other indexes into a common base for all teams.
+The `shared/thirdparty-local` index is the only one that needs its `pypi_whitelist` maintained;
+`«user»/dev` is volatile, all others are not.
+
+
 ## Related Tickets
 
 * [Integrate LDAP-based authentication/authorization](https://bitbucket.org/hpk42/devpi/issue/138/integrate-ldap-based-authentication)
