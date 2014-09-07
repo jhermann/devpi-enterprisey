@@ -32,7 +32,7 @@ The above command sequence is idempotent, i.e. you can repeat it as often as nee
 ### Example for an index-per-team setup with shared global indexes
 
 The following shows how an index setup for a department with multiple teams can look like
-– it tries to strike a balance between simplicity and flexibility (i.e. independence and isolation of teams).
+– it tries to strike a balance between flexibility (i.e. independence and isolation of teams) and simplicity.
 
 It's designed for the following requirements:
 
