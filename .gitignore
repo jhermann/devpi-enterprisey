@@ -1,4 +1,5 @@
 debianized-devpi/debian/devpi.substvars
+debianized-devpi/debian/devpi.*.debhelper
 debianized-devpi/debian/devpi/
 debianized-devpi/debian/files
 debianized-devpi/debian/sdist/
