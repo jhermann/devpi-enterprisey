@@ -1,3 +1,10 @@
+devpi (2.0.6-1) trusty; urgency=low
+
+  * dh-virtualenv issue 48: Mirror any interpreter changes caused
+    by Python package updates
+
+ -- Juergen Hermann <jh@web.de>  Tue, 09 Sep 2014 16:00:34 +0200
+
 devpi (2.0.5-1) trusty; urgency=medium
 
   * Update: devpi-server 2.0.5
