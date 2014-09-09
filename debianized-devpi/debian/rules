@@ -16,15 +16,15 @@ PREINSTALL=
 # --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
-DEVPI_VERSION=2.0.2
-DEVPI_URL="https://pypi.python.org/packages/source/d/devpi/devpi-$(DEVPI_VERSION).tar.gz"
+DEVPI_SERVER_VERSION=2.0.6
+DEVPI_URL="https://pypi.python.org/packages/source/d/devpi-server/devpi-server-$(DEVPI_SERVER_VERSION).tar.gz"
 
 # Use a specific repo to build the package?
 ##PYPI_URL="--pypi-url=https://devpi.net/hpk/dev"
 ##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
-DEVPI_FREEZE="requests==2.4.0 devpi-common==2.0.2 devpi-client==2.0.2 devpi-server==2.0.6 devpi-web==2.1.0"
+DEVPI_FREEZE="requests==2.4.0 devpi-common==2.0.2 devpi-client==2.0.2 devpi-web==2.1.0"
 
 # Add plugin packages, as a space- or comma-separated list
 DEVPI_PLUGINS="devpi-findlinks==1.0.0"
