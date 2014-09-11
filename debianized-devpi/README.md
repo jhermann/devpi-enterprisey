@@ -33,6 +33,8 @@ apt-cache show devpi
 
 The version of `devpi` and other core components used is determined in `debian/rules`.
 
+☛ **Note that for a successful build, you need [this branch](https://github.com/jhermann/dh-virtualenv/tree/trigger-on-python-update) of `dh-virtualenv` right now.**
+
 
 ## How to configure a simple "devpi" instance?
 
