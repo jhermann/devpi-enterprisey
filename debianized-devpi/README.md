@@ -9,7 +9,8 @@ using [dh-virtualenv](https://github.com/spotify/dh-virtualenv).
 The resulting package is thus easily installed to and removed from a machine, but contains no configuration,
 and is not a ‘normal’ Debian `python-*` package. If you want that, look elsewhere.
 
-The created virtualenv also contains any plugins configured in `debian/rules` — right now, that is `devpi-findlinks` by default.
+The created virtualenv also contains any plugins configured in `debian/rules`
+— right now, that is `devpi-web` and `devpi-findlinks` by default.
 
 
 ## How to build and install the package?
