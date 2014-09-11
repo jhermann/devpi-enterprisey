@@ -28,7 +28,7 @@ cd devpi-enterprisey/
 ( cd debianized-devpi/ && dpkg-buildpackage -uc -us -b )
 sudo dpkg -i devpi_2*.deb
 apt-cache show devpi
-devpi --version # ensure it basically works
+/usr/bin/devpi --version # ensure it basically works
 ```
 
 The version of `devpi` and other core components used is determined in `debian/rules`.
