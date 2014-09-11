@@ -44,8 +44,15 @@ It's designed for the following requirements:
 
 All team indexes eventually lead to `shared/stable`, a *virtual* index that is not supposed to hold any packages,
 but only assemble other indexes into a common base for all teams.
-The `shared/thirdparty-local` index is the only one that needs its `pypi_whitelist` maintained;
+The `shared/thirdparty-local` index is the only one that needs its `pypi_whitelist` maintained (or set to `*`);
 `«user»/dev` is volatile, all others are not.
+
+While the overall complexity of this setup can be staggering, it only ever reflects the complexity of your organization
+(having a lot of teams). The *isolation* it provides actually helps to cope with that, since a single developer
+only has to consider at most three of these indexes (his team's, and the virtual shared one).
+There is no need to co-ordinate their use with other teams, and the QA gateway ensures the integrity of the shared pool.
+In case you need to scale across several departments, you can simply apply the same pattern in a fractal way,
+or set up discrete instances of `devpi-server`.
 
 
 ## Related Tickets
