@@ -3,6 +3,15 @@
 Augmentation of the awesome [devpi](http://doc.devpi.net/latest/) project
 with ‘enterprisey’ requirements, configuration, and deployment.
 
+**Table of Contents**
+
+- [How-Tos](#user-content-how-tos)
+    - [Installing the ‘devpi’ client into your home](#user-content-installing-the-devpi-client-into-your-home)
+    - [Example for an index-per-team setup with shared global indexes](#user-content-example-for-an-index-per-team-setup-with-shared-global-indexes)
+- [Related Tickets](#user-content-related-tickets)
+- [Related Projects](#user-content-related-projects)
+- [References](#user-content-references)
+
 This project provides the following components:
 
 * *Debian Packaging* – read the [docs](https://github.com/jhermann/devpi-enterprisey/tree/master/debianized-devpi) on how to build and install a `devpi` release as a DEB package, contained in a Python virtualenv.
