@@ -5,12 +5,16 @@ with ‘enterprisey’ requirements, configuration, and deployment.
 
 **Table of Contents**
 
+- [Overview](#user-content-overview)
 - [How-Tos](#user-content-how-tos)
     - [Installing the ‘devpi’ client into your home](#user-content-installing-the-devpi-client-into-your-home)
     - [Example for an index-per-team setup with shared global indexes](#user-content-example-for-an-index-per-team-setup-with-shared-global-indexes)
 - [Related Tickets](#user-content-related-tickets)
 - [Related Projects](#user-content-related-projects)
 - [References](#user-content-references)
+
+
+## Overview
 
 This project provides the following components:
 
