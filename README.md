@@ -64,7 +64,9 @@ or set up discrete instances of `devpi-server`.
 
 ## Related Projects
 
-* [mcoupland/devpi-training](https://github.com/mcoupland/devpi-training) – Documents for `devpi` trainings.
+* [hpk42/devpi](https://bitbucket.org/hpk42/devpi)
+* [devpi/devpi-findlinks](https://github.com/devpi/devpi-findlinks)
+* [devpi/devpi-ldap](https://github.com/devpi/devpi-ldap) (pre-alpha as of 2014/09)
 * [blue-yonder/devpi-builder](https://github.com/blue-yonder/devpi-builder) – Brandon, the devpi-builder, takes a `requirements.txt` and incrementally fills a `devpi` index with wheels of the listed Python packages.
 * [pypa/twine](https://github.com/pypa/twine) – Twine is a utility for interacting with PyPI.
 * [pypa/bandersnatch](https://bitbucket.org/pypa/bandersnatch) – A PyPI mirror client implementing PEP 381, enabling you to go fully off-line with a complete copy of the packages hosted on the official PyPI index.
@@ -72,6 +74,5 @@ or set up discrete instances of `devpi-server`.
 
 ## References
 
-* [hpk42/devpi](https://bitbucket.org/hpk42/devpi)
-* [devpi/devpi-findlinks](https://github.com/devpi/devpi-findlinks)
-* [devpi/devpi-ldap](https://github.com/devpi/devpi-ldap) (pre-alpha as of 2014/09)
+* [devpi: driving packaging and testing needs](http://youtu.be/84oOMBUUywI) – Holger's talk at PyCon DE 2013, an introduction to `devpi` and its philosophy (in English, shortly before the 1.2 release).
+* [mcoupland/devpi-training](https://github.com/mcoupland/devpi-training) – Documents for `devpi` trainings.
