@@ -10,7 +10,6 @@ with ‘enterprisey’ requirements, configuration, and deployment.
     - [Installing the ‘devpi’ client into your home](#user-content-installing-the-devpi-client-into-your-home)
     - [Example for an index-per-team setup with shared global indexes](#user-content-example-for-an-index-per-team-setup-with-shared-global-indexes)
     - [Using `devpi` in Jenkins](#user-content-using-devpi-in-jenkins)
-### 
 - [Related Tickets](#user-content-related-tickets)
 - [Related Projects](#user-content-related-projects)
 - [References](#user-content-references)
