@@ -62,6 +62,14 @@ or set up discrete instances of `devpi-server`.
 * [Enable inheriting from external index (other than pypi.python.org)](https://bitbucket.org/hpk42/devpi/issue/12/enable-inheriting-from-external-index)
 
 
+## Related Projects
+
+* [mcoupland/devpi-training](https://github.com/mcoupland/devpi-training) – Documents for `devpi` trainings.
+* [blue-yonder/devpi-builder](https://github.com/blue-yonder/devpi-builder) – Brandon, the devpi-builder, takes a `requirements.txt` and incrementally fills a `devpi` index with wheels of the listed Python packages.
+* [pypa/twine](https://github.com/pypa/twine) – Twine is a utility for interacting with PyPI.
+* [pypa/bandersnatch](https://bitbucket.org/pypa/bandersnatch) – A PyPI mirror client implementing PEP 381, enabling you to go fully off-line with a complete copy of the packages hosted on the official PyPI index.
+
+
 ## References
 
 * [hpk42/devpi](https://bitbucket.org/hpk42/devpi)
