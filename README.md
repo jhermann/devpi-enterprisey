@@ -9,6 +9,8 @@ with ‘enterprisey’ requirements, configuration, and deployment.
 - [How-Tos](#user-content-how-tos)
     - [Installing the ‘devpi’ client into your home](#user-content-installing-the-devpi-client-into-your-home)
     - [Example for an index-per-team setup with shared global indexes](#user-content-example-for-an-index-per-team-setup-with-shared-global-indexes)
+    - [Using `devpi` in Jenkins](#user-content-using-devpi-in-jenkins)
+### 
 - [Related Tickets](#user-content-related-tickets)
 - [Related Projects](#user-content-related-projects)
 - [References](#user-content-references)
@@ -66,6 +68,25 @@ only has to consider at most three of these indexes (his team's, and the virtual
 There is no need to co-ordinate their use with other teams, and the QA gateway ensures the integrity of the shared pool.
 In case you need to scale across several departments, you can simply apply the same pattern in a fractal way,
 or set up discrete instances of `devpi-server`.
+
+
+### Using `devpi` in Jenkins
+
+First things first, every slave in your Jenkins farm should either get the `devpi` package installed,
+or else an equivalent install of `devpi-client` (e.g. by `pipsi`).
+Then add the `devpi_use` helper functions as described [here](https://github.com/jhermann/devpi-enterprisey/wiki/DevPIandJenkins)
+into your Jenkins user's `~/.bashrc`.
+
+Each job is responsible to select the proper index to use, by issuing the following command early on in its build step (take notice of the underscore in `devpi_use`):
+
+        devpi_use shared/stable # select the proper index for your project
+        # Now an alias for "devpi" is set, that uses "${WORKSPACE}/.devpi" as its clientdir;
+        # also sets PIP_INDEX_URL, so you can do «pip install …» without further thoughts.
+
+The `shared/stable` index should be set as the user's default, so if you only need internally *released* or external packages, you can simply use pip without any extra considerations. You then don't need the above command, since `~/.pip/pip.conf` is used..
+The final step of preparation is to install your project's requirements via a `requirements.txt` as usual
+
+❢❢❢ Do NOT use devpi directly with `--set-cfg` or without a `--clientdir` pointing into your workspace on Jenkins, you'd otherwise create a hell of race conditions for yourself and others! Also, related config files shouldn't be writable anyway to prevent exactly that.
 
 
 ## Related Tickets
