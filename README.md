@@ -79,9 +79,11 @@ into your Jenkins user's `~/.bashrc`.
 
 Each job is responsible to select the proper index to use, by issuing the following command early on in its build step (take notice of the underscore in `devpi_use`):
 
-        devpi_use shared/stable # select the proper index for your project
-        # Now an alias for "devpi" is set, that uses "${WORKSPACE}/.devpi" as its clientdir;
-        # also sets PIP_INDEX_URL, so you can do «pip install …» without further thoughts.
+```sh
+devpi_use shared/stable # select the proper index for your project
+# Now an alias for "devpi" is set, that uses "${WORKSPACE}/.devpi" as its clientdir;
+# also sets PIP_INDEX_URL, so you can do «pip install …» without further thoughts.
+```
 
 The `shared/stable` index should be set as the user's default, so if you only need internally *released* or external packages, you can simply use pip without any extra considerations. You then don't need the above command, since `~/.pip/pip.conf` is used..
 The final step of preparation is to install your project's requirements via a `requirements.txt` as usual
