@@ -21,6 +21,7 @@ This project provides the following components:
 
 * *Debian Packaging* – read the [docs](https://github.com/jhermann/devpi-enterprisey/tree/master/debianized-devpi) on how to build and install a `devpi` release as a DEB package, contained in a Python virtualenv.
 * *Puppet Deployment* – see the example node definition in [site.pp](https://github.com/jhermann/devpi-puppet/blob/master/site.pp) on how to install devpi-server behind a NginX proxy, using the [devpi-puppet](https://github.com/jhermann/devpi-puppet) module.
+* The [wiki](https://github.com/jhermann/devpi-enterprisey/wiki) contains some articles with details on different aspects of using `devpi` in an enterprise work environment.
 
 
 ## How-Tos
