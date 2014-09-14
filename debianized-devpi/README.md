@@ -1,5 +1,13 @@
 # "devpi" Debian Packaging
 
+![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+ ![Tag](http://img.shields.io/github/tag/jhermann/devpi-puppet.svg)
+ ![Issues#](http://img.shields.io/github/issues/jhermann/devpi-puppet.svg)
+
+| `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` |
+|:---:|:---:|:---:|:---:|:---:|
+| ![devpi-server](http://img.shields.io/pypi/v/devpi-server.svg) | ![devpi-client](http://img.shields.io/pypi/v/devpi-client.svg) | ![devpi-common](http://img.shields.io/pypi/v/devpi-common.svg) | ![devpi-web](http://img.shields.io/pypi/v/devpi-web.svg) | ![devpi-findlinks](http://img.shields.io/pypi/v/devpi-findlinks.svg) |
+
 ## What is this?
 
 The Debian packaging metadata in
