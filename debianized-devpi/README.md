@@ -7,6 +7,8 @@
 | `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` |
 |:---:|:---:|:---:|:---:|:---:|
 | ![devpi-server](http://img.shields.io/pypi/v/devpi-server.svg) | ![devpi-client](http://img.shields.io/pypi/v/devpi-client.svg) | ![devpi-common](http://img.shields.io/pypi/v/devpi-common.svg) | ![devpi-web](http://img.shields.io/pypi/v/devpi-web.svg) | ![devpi-findlinks](http://img.shields.io/pypi/v/devpi-findlinks.svg) |
+| ![deb](http://img.shields.io/badge/deb-v2.0.6-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.0.2-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.0.2-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.1.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v1.0.0-d80854.svg) |
+
 
 ## What is this?
 
