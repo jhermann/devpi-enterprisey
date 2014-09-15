@@ -4,7 +4,6 @@ Augmentation of the awesome [devpi](http://doc.devpi.net/latest/) project
 with ‘enterprisey’ requirements, configuration, and deployment.
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
- ![Issues#](http://img.shields.io/github/issues/jhermann/devpi-enterprisey.svg)
 
 **Table of Contents**
 
