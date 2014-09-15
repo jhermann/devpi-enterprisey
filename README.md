@@ -113,4 +113,3 @@ The final step of preparation is to install your project's requirements via a `r
 ## References
 
 * [devpi: driving packaging and testing needs](http://youtu.be/84oOMBUUywI) – Holger's talk at PyCon DE 2013, an introduction to `devpi` and its philosophy (in English, shortly before the 1.2 release).
-* [mcoupland/devpi-training](https://github.com/mcoupland/devpi-training) – Documents for `devpi` trainings.
