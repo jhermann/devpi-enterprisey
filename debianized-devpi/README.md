@@ -1,8 +1,6 @@
 # "devpi" Debian Packaging
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
- ![Tag](http://img.shields.io/github/tag/jhermann/devpi-enterprisey.svg)
- ![Issues#](http://img.shields.io/github/issues/jhermann/devpi-enterprisey.svg)
 
 | `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` |
 |:---:|:---:|:---:|:---:|:---:|
