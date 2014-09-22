@@ -1,3 +1,9 @@
+devpi (2.0.7-1) trusty; urgency=low
+
+  * Updates: devpi-server 2.0.7; devpi-web 2.1.1
+
+ -- Juergen Hermann <jh@web.de>  Mon, 22 Sep 2014 10:06:13 +0200
+
 devpi (2.0.6-2) precise; urgency=low
 
   * Use dh-virtualenv 0.8 autoscript for interpreter updates
