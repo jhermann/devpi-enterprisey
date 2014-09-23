@@ -104,7 +104,14 @@ To query where your `devpi` client gets its CA certificates from, you can use th
 $(head -n1 $(command which devpi) | tr -d '#!') -m requests.certs
 ```
 
-Now say you have a bunch of local CA or self-signed certificates in `/usr/share/ca-certificates/acme.com`, then the following will make them accessible to both `devpi` and `pip`:
+In case you have your root CA certificates on a Debian system properly installed so that `update-ca-certificates` sees them, all you need is this (preferably added to a file in `/etc/profile.d`):
+
+```sh
+export PIP_CERT="/etc/ssl/certs/ca-certificates.crt"
+export REQUESTS_CA_BUNDLE="$PIP_CERT"
+```
+
+Otherwise, let's say you have a bunch of local CA or self-signed certificates in `/usr/share/ca-certificates/acme.com`, then the following will make them accessible to both `devpi` and `pip`:
 
 ```sh
 company=acme.com
