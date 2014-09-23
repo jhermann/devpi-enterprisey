@@ -12,6 +12,7 @@ with ‘enterprisey’ requirements, configuration, and deployment.
     - [Installing the ‘devpi’ client into your home](#user-content-installing-the-devpi-client-into-your-home)
     - [Example for an index-per-team setup with shared global indexes](#user-content-example-for-an-index-per-team-setup-with-shared-global-indexes)
     - [Using `devpi` in Jenkins](#user-content-using-devpi-in-jenkins)
+    - [SSL certificate handling](#user-content-ssl-certificate-handling)
 - [Related Tickets](#user-content-related-tickets)
 - [Related Projects](#user-content-related-projects)
 - [References](#user-content-references)
@@ -91,6 +92,33 @@ The `shared/stable` index should be set as the user's default, so if you only ne
 The final step of preparation is to install your project's requirements via a `requirements.txt` as usual
 
 ❢❢❢ Do NOT use devpi directly with `--set-cfg` or without a `--clientdir` pointing into your workspace on Jenkins, you'd otherwise create a hell of race conditions for yourself and others! Also, related config files shouldn't be writable anyway to prevent exactly that.
+
+
+### SSL certificate handling
+
+Accessing your `devpi` server over a secure connection is recommended, and also silences that pesky `pip` warning about insecure connections. Unless your certificate is issued by a well-known authority, you have to provide clients with the root certificates you're using, either self-signed or local PKI ones.
+
+To query where your `devpi` client gets its CA certificates from, you can use the following scary-looking but harmless command:
+
+```sh
+$(head -n1 $(command which devpi) | tr -d '#!') -m requests.certs
+```
+
+Now say you have a bunch of local CA or self-signed certificates in `/usr/share/ca-certificates/acme.com`, then the following will make them accessible to both `devpi` and `pip`:
+
+```sh
+company=acme.com
+mkdir -p ~/.local
+export PIP_CERT="$HOME/.local/cacert.pem"
+export REQUESTS_CA_BUNDLE="$PIP_CERT"
+cat >"$PIP_CERT" $($(head -n1 $(command which devpi) | tr -d '#!') -m requests.certs) /usr/share/ca-certificates/$company/*.crt
+```
+
+In case your `devpi` server is a virtual host and shares its IP with a bunch of other domains, you also need SNI support for Python 2 (SNI = [Server Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication)). To enable that, use your virtualenv's `pip` to install these packages:
+
+```sh
+pip install pyOpenSSL pyasn1 ndg-httpsclient
+```
 
 
 ## Related Tickets
