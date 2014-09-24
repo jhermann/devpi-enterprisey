@@ -124,8 +124,12 @@ cat >"$PIP_CERT" $($(head -n1 $(command which devpi) | tr -d '#!') -m requests.c
 In case your `devpi` server is a virtual host and shares its IP with a bunch of other domains, you also need SNI support for Python 2 (SNI = [Server Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication)). To enable that, use your virtualenv's `pip` to install these packages:
 
 ```sh
-pip install pyOpenSSL pyasn1 ndg-httpsclient
+pip install -U pip pyOpenSSL pyasn1 ndg-httpsclient
 ```
+
+Note that we also update `pip` to the latest version here, since only recent ones can take advantage of the improved SSL packages.
+You might also need to provide a HTTP `--index-url` or activate a `--proxy` to perform this initial bootstrap
+– this is an example why it makes sense to keep a `devpi` server port for HTTP open for the time being.
 
 
 ## Related Tickets
