@@ -152,4 +152,5 @@ You might also need to provide a HTTP `--index-url` or activate a `--proxy` to p
 
 ## References
 
+* [packaging and testing with devpi and tox ](https://youtu.be/aNrrGf-uNUY) – Holger at EP 2014 in Berlin.
 * [devpi: driving packaging and testing needs](http://youtu.be/84oOMBUUywI) – Holger's talk at PyCon DE 2013, an introduction to `devpi` and its philosophy (in English, shortly before the 1.2 release).
