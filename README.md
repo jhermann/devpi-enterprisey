@@ -88,7 +88,7 @@ devpi_use shared/stable # select the proper index for your project
 # also sets PIP_INDEX_URL, so you can do «pip install …» without further thoughts.
 ```
 
-The `shared/stable` index should be set as the user's default, so if you only need internally *released* or external packages, you can simply use pip without any extra considerations. You then don't need the above command, since `~/.pip/pip.conf` is used..
+The `shared/stable` index should be set as the user's default, so if you only need internally *released* or external packages, you can simply use pip without any extra considerations. You then don't need the above command, since `~/.pip/pip.conf` is used.
 The final step of preparation is to install your project's requirements via a `requirements.txt` as usual
 
 ❢❢❢ Do NOT use devpi directly with `--set-cfg` or without a `--clientdir` pointing into your workspace on Jenkins, you'd otherwise create a hell of race conditions for yourself and others! Also, related config files shouldn't be writable anyway to prevent exactly that.
