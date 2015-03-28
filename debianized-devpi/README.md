@@ -58,6 +58,7 @@ addgroup devpi
 adduser devpi --ingroup devpi --home /var/lib/devpi --system --disabled-password
 sudo -l -u devpi bash -c "cd /tmp && /usr/sbin/devpi-server --gen-config"
 cp /tmp/gen-config/supervisor-devpi.conf /etc/supervisor/conf.d/devpi-server.conf
+echo >>/etc/supervisor/conf.d/devpi-server.conf "directory = /var/lib/devpi"
 supervisorctl update
 supervisorctl tail -f devpi-server
 ```
