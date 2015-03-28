@@ -1,3 +1,9 @@
+devpi (2.1.5-1) precise; urgency=medium
+
+  * Versions: Updated to current devpi packages
+
+ -- Jürgen Hermann <jh@web.de>  Sat, 28 Mar 2015 20:09:01 +0100
+
 devpi (2.0.7-2) precise; urgency=low
 
   * Package metadata: Depending on the "python*-minimal"
