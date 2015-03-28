@@ -2,10 +2,10 @@
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
 
-| `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` |
-|:---:|:---:|:---:|:---:|:---:|
-| ![devpi-server](http://img.shields.io/pypi/v/devpi-server.svg) | ![devpi-client](http://img.shields.io/pypi/v/devpi-client.svg) | ![devpi-common](http://img.shields.io/pypi/v/devpi-common.svg) | ![devpi-web](http://img.shields.io/pypi/v/devpi-web.svg) | ![devpi-findlinks](http://img.shields.io/pypi/v/devpi-findlinks.svg) |
-| ![deb](http://img.shields.io/badge/deb-v2.1.5-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.1.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.0.5-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.2.3-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v1.0.0-d80854.svg) |
+| `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` | `requests` |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| ![devpi-server](http://img.shields.io/pypi/v/devpi-server.svg) | ![devpi-client](http://img.shields.io/pypi/v/devpi-client.svg) | ![devpi-common](http://img.shields.io/pypi/v/devpi-common.svg) | ![devpi-web](http://img.shields.io/pypi/v/devpi-web.svg) | ![devpi-findlinks](http://img.shields.io/pypi/v/devpi-findlinks.svg) | ![requests](http://img.shields.io/pypi/v/requests.svg) |
+| ![deb](http://img.shields.io/badge/deb-v2.1.5-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.1.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.0.5-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.2.3-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v1.0.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.6.0-d80854.svg) |
 
 
 ## What is this?
