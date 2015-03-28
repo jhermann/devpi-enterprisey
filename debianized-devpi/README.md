@@ -56,7 +56,7 @@ use these commands as `root` to configure and start your `devpi` server:
 apt-get install supervisor
 addgroup devpi
 adduser devpi --ingroup devpi --home /var/lib/devpi --system --disabled-password
-sudo -u devpi bash -c "cd /tmp && /usr/sbin/devpi-server --gen-config"
+sudo -l -u devpi bash -c "cd /tmp && /usr/sbin/devpi-server --gen-config"
 cp /tmp/gen-config/supervisor-devpi.conf /etc/supervisor/conf.d/devpi-server.conf
 supervisorctl update
 supervisorctl tail -f devpi-server
