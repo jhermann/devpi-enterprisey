@@ -1,3 +1,10 @@
+devpi (2.0.7-2) precise; urgency=low
+
+  * Package metadata: Depending on the "python*-minimal"
+    packages is wrong
+
+ -- Jürgen Hermann <jh@web.de>  Sat, 28 Mar 2015 19:53:22 +0100
+
 devpi (2.0.7-1) trusty; urgency=low
 
   * Updates: devpi-server 2.0.7; devpi-web 2.1.1
