@@ -79,3 +79,46 @@ Finally, you can open the [web interface](http://localhost:3141/) and browse you
 For further details, consult devpi's
 [Release Process Quickstart](http://doc.devpi.net/latest/quickstart-releaseprocess.html)
 documentation, starting with *“devpi install: installing a package.”*
+
+
+## How to migrate to a new version?
+
+Consult the [release announcements](https://groups.google.com/forum/#!searchin/devpi-dev/releases|sort:date)
+whether you actually need to migrate your data or not.
+It is however safest to always do so.
+You'll find the
+[basic migration procedure](http://doc.devpi.net/latest/quickstart-server.html#versioning-exporting-and-importing-server-state)
+in the official docs.
+
+The following is a condensed sequence of commands
+you need when using a [devpi-puppet](https://github.com/jhermann/devpi-puppet) setup,
+call them in a `root` shell. You should build the new Debian package before that and
+have it ready for upgrading, e.g. uploaded to Artifactory.
+
+```sh
+now="$(date +'%Y-%m-%d-%H%M')"
+
+# Export your data
+supervisorctl stop devpi-server
+devpi-server --export "$HOME/devpi-export-$now"
+mv /var/lib/devpi/data /var/lib/devpi/_data-backup-$now
+
+# Update (use 'dpkg -i' if you have no local Debian repository)
+apt-get update
+apt-get install devpi
+
+# Restore data and start new version
+devpi-server --serverdir /var/lib/devpi/data --import "$HOME/devpi-export-$now"
+chown -R devpi.devpi /var/lib/devpi/data
+
+# Start server
+supervisorctl start devpi-server; supervisorctl tail -f devpi-server
+```
+
+In a setup with a master and replicas, follow this procedure:
+
+* First stop the master and its Nginx server.
+* Unless you have an automatic fail-over from master to replica, you also have to switch over to the replica manually.
+* Upgrade the master without the final start.
+* Stop all the replicas, and start both the master web and devpi server (and switch back to it). This minimizes the downtime window, and you can always go back to running the replica if anything goes wrong.
+* Once the new master holds up, finish the upgrade procedure for the replicas.
