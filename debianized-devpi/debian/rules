@@ -43,7 +43,7 @@ build-arch:
 	cd debian && curl -sLOkS $(DEVPI_URL)
 	mkdir -p debian/sdist
 	tar -xz -C debian/sdist --strip-components=1 --exclude '*.egg-info' -f debian/*.tar.gz
-	echo "$(DEVPI_FREEZE) $(DEVPI_PLUGINS)" | tr ' ,' '\n\n' >>debian/sdist/requirements.txt
+	echo $(DEVPI_FREEZE) $(DEVPI_PLUGINS) | tr ' ,' '\n\n' >>debian/sdist/requirements.txt
 	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist
 
 %:
