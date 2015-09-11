@@ -1,3 +1,11 @@
+devpi (2.3.0-1) trusty; urgency=medium
+
+  * New upstream release 2.3.0
+  * devpi-client 2.3.1
+  * devpi-web 2.4.1
+
+ -- Juergen Hermann <jh@web.de>  Fri, 11 Sep 2015 12:05:57 +0200
+
 devpi (2.2.2-1) trusty; urgency=medium
 
   * New upstream release 2.2.2
