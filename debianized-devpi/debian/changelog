@@ -1,3 +1,10 @@
+devpi (2.3.1-1) trusty; urgency=medium
+
+  * Upstream bugfix release 2.3.1
+  * devpi-common 2.0.7
+
+ -- Juergen Hermann <jh@web.de>  Wed, 16 Sep 2015 12:14:26 +0200
+
 devpi (2.3.0-1) trusty; urgency=medium
 
   * New upstream release 2.3.0
