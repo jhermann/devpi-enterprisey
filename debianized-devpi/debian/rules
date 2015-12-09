@@ -16,7 +16,7 @@ PREINSTALL=
 # --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
-DEVPI_SERVER_VERSION=2.3.1
+DEVPI_SERVER_VERSION=2.5.3
 DEVPI_URL="https://pypi.python.org/packages/source/d/devpi-server/devpi-server-$(DEVPI_SERVER_VERSION).tar.gz"
 
 # Use a specific repo to build the package?
@@ -24,10 +24,10 @@ DEVPI_URL="https://pypi.python.org/packages/source/d/devpi-server/devpi-server-$
 ##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
-DEVPI_FREEZE="devpi-client==2.3.1 devpi-common==2.0.7 devpi-web==2.4.1 requests==2.7.0"
+DEVPI_FREEZE="devpi-client==2.3.2 devpi-common==2.0.8 devpi-web==2.5.0 requests==2.8.1"
 
 # Add plugin packages, as a space- or comma-separated list
-DEVPI_PLUGINS="devpi-findlinks==1.0.0"
+DEVPI_PLUGINS="devpi-findlinks==1.0.1"
 
 PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
 DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')

@@ -1,3 +1,14 @@
+devpi (2.5.3-1) trusty; urgency=medium
+
+  * Upstream bugfix release 2.5.3
+  * devpi-client 2.3.2
+  * devpi-common 2.0.8
+  * devpi-web 2.5.0
+  * devpi-findlinks 1.0.1
+  * requests 2.8.1
+
+ -- Juergen Hermann <jh@web.de>  Wed, 09 Dec 2015 15:32:06 +0100
+
 devpi (2.3.1-1) trusty; urgency=medium
 
   * Upstream bugfix release 2.3.1
