@@ -25,7 +25,8 @@ The created virtualenv also contains any plugins configured in `debian/rules`
 
 You need of course a machine with the build dependencies installed, specifically
 [dh-virtualenv](https://github.com/spotify/dh-virtualenv) in addition to the normal Debian packaging tools.
-You can get it from [this PPA](https://launchpad.net/~dh-virtualenv/+archive/ubuntu/stable) or [Debian packages](https://packages.debian.org/source/experimental/dh-virtualenv).
+You can get it from [this PPA](https://launchpad.net/~dh-virtualenv/+archive/ubuntu/stable)
+or [Debian packages](https://packages.debian.org/source/sid/dh-virtualenv).
 
 Then the following commands will install a *release* version of `devpi` into `/usr/share/python/devpi/`, and place symlinks
 for `devpi` (in `bin`) and `devpi-server` (in `sbin`) into the machine's PATH.
