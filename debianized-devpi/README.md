@@ -90,6 +90,9 @@ You'll find the
 [basic migration procedure](http://doc.devpi.net/latest/quickstart-server.html#versioning-exporting-and-importing-server-state)
 in the official docs.
 
+:exclamation: | Also consult the [devpi administration manual](http://doc.devpi.net/3.0/adminman/)!
+----: | :----
+
 The following is a condensed sequence of commands
 you need when using a [devpi-puppet](https://github.com/jhermann/devpi-puppet) setup,
 call them in a `root` shell. You should build the new Debian package before that and
