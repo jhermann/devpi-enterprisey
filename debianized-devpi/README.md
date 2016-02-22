@@ -34,7 +34,7 @@ for `devpi` (in `bin`) and `devpi-server` (in `sbin`) into the machine's PATH.
 git clone https://github.com/jhermann/devpi-enterprisey.git
 cd devpi-enterprisey/
 ( cd debianized-devpi/ && dpkg-buildpackage -uc -us -b )
-sudo dpkg -i devpi_2*.deb
+sudo dpkg -i devpi_3*.deb
 apt-cache show devpi
 /usr/bin/devpi --version # ensure it basically works
 ```
