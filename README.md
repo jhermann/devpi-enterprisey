@@ -62,7 +62,7 @@ It's designed for the following requirements:
 
 All team indexes eventually lead to `shared/stable`, a *virtual* index that is not supposed to hold any packages,
 but only assemble other indexes into a common base for all teams.
-The `shared/thirdparty-local` index is the only one that needs its `pypi_whitelist` maintained (or set to `*`);
+The `shared/thirdparty-local` index is the only one that needs its `mirror_whitelist` maintained (or set to `*`);
 `«user»/dev` is volatile, all others are not.
 
 While the overall complexity of this setup can be staggering, it only ever reflects the complexity of your organization
