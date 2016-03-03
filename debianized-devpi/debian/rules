@@ -13,10 +13,11 @@
 
 # Packages to install before the main project
 PREINSTALL=
+# --preinstall 'requests[security]' # for Python before 2.7.9
 # --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
-DEVPI_SERVER_VERSION=3.0.1
+DEVPI_SERVER_VERSION=3.0.2
 DEVPI_URL="https://pypi.python.org/packages/source/d/devpi-server/devpi-server-$(DEVPI_SERVER_VERSION).tar.gz"
 
 # Use a specific repo to build the package?

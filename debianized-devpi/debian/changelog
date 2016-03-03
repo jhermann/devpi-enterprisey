@@ -1,3 +1,13 @@
+devpi (3.0.2-2~trusty) trusty; urgency=low
+
+  * Upstream release 3.0.2
+  * fix setting of mirror_whitelist.
+  * normalize names when setting mirror_whitelist.
+  * fix handling of 404 in mirror indexes on replicas.
+  * include version in file paths in exported data to avoid possible name conflicts.
+
+ -- Jürgen Hermann <jh@web.de>  Thu, 03 Mar 2016 21:14:00 +0100
+
 devpi (3.0.1-1~trusty) trusty; urgency=medium
 
   * Upstream release 3.0.1
