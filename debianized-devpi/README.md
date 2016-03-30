@@ -73,6 +73,7 @@ devpi login root --password=
 devpi user -c local # … and enter password
 devpi login local # … and enter password
 devpi index -c dev
+devpi index dev bases=root/pypi
 devpi use dev --set-cfg # be aware this changes 'index_url' of several configs in your $HOME
 ```
 
