@@ -17,7 +17,7 @@ PREINSTALL=
 # --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
-DEVPI_SERVER_VERSION=3.1.0
+DEVPI_SERVER_VERSION=3.1.1
 # yolk -D devpi-server==3.1.0
 DEVPI_URL="https://pypi.python.org/packages/01/16/d79c51f87855f047ab8428d0b03e3b7779b07f015a86810918979c76dee2/devpi-server-3.1.0.tar.gz"
 
@@ -26,7 +26,7 @@ DEVPI_URL="https://pypi.python.org/packages/01/16/d79c51f87855f047ab8428d0b03e3b
 ##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
-DEVPI_FREEZE="devpi-client==2.6.2 devpi-common==2.0.8 devpi-web==3.1.0 requests==2.10.0"
+DEVPI_FREEZE="devpi-client==2.6.2 devpi-common==2.0.10 devpi-web==3.1.0 requests==2.10.0"
 
 # Add plugin packages, as a space- or comma-separated list
 DEVPI_PLUGINS="devpi-findlinks==1.0.1"
