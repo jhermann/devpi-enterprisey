@@ -1,10 +1,10 @@
-devpi (3.1.1-1~trusty) trusty; urgency=high
+devpi (3.1.1-2~trusty) trusty; urgency=high
 
   * Upstream release 3.1.1
   * fix: packages with dots in their name weren't found
   * devpi-common 2.0.10 (was 2.0.8)
 
- -- Juergen Hermann <jh@web.de>  Fri, 13 May 2016 15:39:15 +0200
+ -- Juergen Hermann <jh@web.de>  Fri, 13 May 2016 16:18:46 +0200
 
 devpi (3.1.0-1~trusty) trusty; urgency=medium
 

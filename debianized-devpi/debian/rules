@@ -12,14 +12,14 @@
 # and a recursive explosion ensues when symlinks are followed.
 
 # Packages to install before the main project
-PREINSTALL=
+PREINSTALL=--preinstall pip
 # --preinstall 'requests[security]' # for Python before 2.7.9
-# --preinstall "https://github.com/jhermann/requests/archive/proxy-fixed-for-devpi.zip\#egg=requests"
 
 # Version of "devpi" meta package
 DEVPI_SERVER_VERSION=3.1.1
-# yolk -D devpi-server==3.1.0
-DEVPI_URL="https://pypi.python.org/packages/01/16/d79c51f87855f047ab8428d0b03e3b7779b07f015a86810918979c76dee2/devpi-server-3.1.0.tar.gz"
+DEVPI_SERVER_PYPI="https://pypi.python.org/simple/devpi-server/"
+DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI) \
+    | grep devpi-server-$(DEVPI_SERVER_VERSION).tar.gz | cut -f2 -d'"' | cut -f1 -d\#)
 
 # Use a specific repo to build the package?
 ##PYPI_URL="--pypi-url=https://devpi.net/hpk/dev"
