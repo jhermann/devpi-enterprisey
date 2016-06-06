@@ -1,3 +1,11 @@
+devpi (4.0.0-1~trusty) trusty; urgency=high
+
+  * Upstream release: 4.0.0
+  * devpi-client: 2.6.3
+  * devpi-common: 3.0.0
+
+ -- Juergen Hermann <jh@web.de>  Mon, 06 Jun 2016 14:13:23 +0200
+
 devpi (3.1.1-2~trusty) trusty; urgency=high
 
   * Upstream release 3.1.1

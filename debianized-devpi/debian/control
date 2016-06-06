@@ -2,13 +2,13 @@ Source: devpi
 Section: contrib/python
 Priority: extra
 Maintainer: Holger Krekel <devpi-dev@googlegroups.com>
-Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8), curl, tar, gzip
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.11), curl, tar, gzip
 Standards-Version: 3.9.5
 Homepage: http://doc.devpi.net/latest/
 
 Package: devpi
 Architecture: any
-Pre-Depends: dpkg (>= 1.16.1), python2.7 | python2.6, ${misc:Pre-Depends}
+Pre-Depends: dpkg (>= 1.16.1), python2.7, ${misc:Pre-Depends}
 Depends: ${python:Depends}, ${misc:Depends}
 Recommends: nginx-full | nginx
 Description: GitHub-style PyPI index server and packaging meta tool

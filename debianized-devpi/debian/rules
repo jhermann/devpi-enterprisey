@@ -12,11 +12,11 @@
 # and a recursive explosion ensues when symlinks are followed.
 
 # Packages to install before the main project
-PREINSTALL=--preinstall pip
-# --preinstall 'requests[security]' # for Python before 2.7.9
+PREINSTALL=--preinstall 'pip<8' --preinstall 'wheel'
+# --preinstall 'requests[security]' # for Python before 2.7.9, e.g. on Ubuntu Trusty
 
 # Version of "devpi" meta package
-DEVPI_SERVER_VERSION=3.1.1
+DEVPI_SERVER_VERSION=4.0.0
 DEVPI_SERVER_PYPI="https://pypi.python.org/simple/devpi-server/"
 DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI) \
     | grep devpi-server-$(DEVPI_SERVER_VERSION).tar.gz | cut -f2 -d'"' | cut -f1 -d\#)
@@ -26,7 +26,7 @@ DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI) \
 ##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
-DEVPI_FREEZE="devpi-client==2.6.2 devpi-common==2.0.10 devpi-web==3.1.0 requests==2.10.0"
+DEVPI_FREEZE="devpi-client==2.6.3 devpi-common==3.0.0 devpi-web==3.1.0 requests==2.10.0"
 
 # Add plugin packages, as a space- or comma-separated list
 DEVPI_PLUGINS="devpi-findlinks==1.0.1"
