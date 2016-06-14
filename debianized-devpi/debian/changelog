@@ -1,3 +1,9 @@
+devpi (4.0.0-2~xenial) xenial; urgency=high
+
+  * Xenial build (with Python3)
+
+ -- Juergen Hermann <jh@web.de>  Tue, 14 Jun 2016 15:57:48 +0200
+
 devpi (4.0.0-1~trusty) trusty; urgency=high
 
   * Upstream release: 4.0.0
