@@ -3,7 +3,8 @@ debianized-devpi/debian/devpi.*.debhelper
 debianized-devpi/debian/devpi/
 debianized-devpi/debian/files
 debianized-devpi/debian/sdist/
+debianized-devpi/debian/debhelper-build-stamp
 devpi_*.changes
 devpi_*.deb
-devpi_2*.upload
+devpi_*.upload
 wiki/
