@@ -12,7 +12,8 @@
 # and a recursive explosion ensues when symlinks are followed.
 
 # Packages to install before the main project
-PREINSTALL=--preinstall 'pip<8' --preinstall 'wheel'
+PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "pip>8" --preinstall "wheel" \
+    --preinstall pytest --preinstall webtest
 # --preinstall 'requests[security]' # for Python before 2.7.9, e.g. on Ubuntu Trusty
 
 # Version of "devpi" meta package
@@ -33,7 +34,7 @@ DEVPI_PLUGINS="devpi-findlinks==1.0.1"
 
 PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
 DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')
-DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python $(PYPI_URL) $(PREINSTALL) #-v
+DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python3 $(PYPI_URL) $(PREINSTALL) #-v
 
 clean:
 	test ! -d debian/sdist || rm -rf debian/sdist
