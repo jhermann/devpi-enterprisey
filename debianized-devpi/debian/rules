@@ -11,6 +11,8 @@
 # sourcedir ".", because that includes the debian build stage,
 # and a recursive explosion ensues when symlinks are followed.
 
+export DH_VIRTUALENV_INSTALL_ROOT=/opt/venvs
+
 # Packages to install before the main project
 PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "pip>8" --preinstall "wheel" \
     --preinstall pytest --preinstall webtest

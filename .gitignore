@@ -4,6 +4,7 @@ debianized-devpi/debian/devpi/
 debianized-devpi/debian/files
 debianized-devpi/debian/sdist/
 debianized-devpi/debian/debhelper-build-stamp
+debianized-devpi/debian/.debhelper/
 devpi_*.changes
 devpi_*.deb
 devpi_*.upload

@@ -1,3 +1,10 @@
+devpi (4.0.0-3~xenial) xenial; urgency=high
+
+  * Move installation root directory to "/opt/venvs" (fix
+    upgrade problems for Python2 due to misplaced Python3 code)
+
+ -- Juergen Hermann <jh@web.de>  Mon, 12 Mar 2018 16:56:59 +0100
+
 devpi (4.0.0-2~xenial) xenial; urgency=high
 
   * Xenial build (with Python3)

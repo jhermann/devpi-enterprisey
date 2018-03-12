@@ -1,2 +1,2 @@
-usr/share/python/devpi/bin/devpi usr/bin/devpi
-usr/share/python/devpi/bin/devpi-server usr/sbin/devpi-server
+opt/venvs/devpi/bin/devpi usr/bin/devpi
+opt/venvs/devpi/bin/devpi-server usr/sbin/devpi-server
