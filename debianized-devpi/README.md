@@ -5,7 +5,7 @@
 | `devpi-server` | `devpi-client` | `devpi-common` | `devpi-web` | `devpi-findlinks` | `requests` |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | [![devpi-server](http://img.shields.io/pypi/v/devpi-server.svg)](https://pypi.python.org/pypi/devpi-server/) | [![devpi-client](http://img.shields.io/pypi/v/devpi-client.svg)](https://pypi.python.org/pypi/devpi-client/) | [![devpi-common](http://img.shields.io/pypi/v/devpi-common.svg)](https://pypi.python.org/pypi/devpi-common/) | [![devpi-web](http://img.shields.io/pypi/v/devpi-web.svg)](https://pypi.python.org/pypi/devpi-web/) | [![devpi-findlinks](http://img.shields.io/pypi/v/devpi-findlinks.svg)](https://pypi.python.org/pypi/devpi-findlinks/) | [![requests](http://img.shields.io/pypi/v/requests.svg)](https://pypi.python.org/pypi/requests/) |
-| ![deb](http://img.shields.io/badge/deb-v4.0.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.6.3-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v3.0.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v3.1.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v1.0.1-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.10.0-d80854.svg) |
+| ![deb](http://img.shields.io/badge/deb-v4.4.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v4.0.1-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v3.2.1-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v3.2.2-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.0.0-d80854.svg) | ![deb](http://img.shields.io/badge/deb-v2.18.4-d80854.svg) |
 
 
 ## What is this?

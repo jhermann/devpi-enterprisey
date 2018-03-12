@@ -19,7 +19,7 @@ PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "pip>8" --preinstall "wh
 # --preinstall 'requests[security]' # for Python before 2.7.9, e.g. on Ubuntu Trusty
 
 # Version of "devpi" meta package
-DEVPI_SERVER_VERSION=4.0.0
+DEVPI_SERVER_VERSION=4.4.0
 DEVPI_SERVER_PYPI="https://pypi.python.org/simple/devpi-server/"
 DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI) \
     | grep devpi-server-$(DEVPI_SERVER_VERSION).tar.gz | cut -f2 -d'"' | cut -f1 -d\#)
@@ -29,10 +29,10 @@ DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI) \
 ##DEVPI_URL="https://devpi.net/hpk/dev/+f/852/a16d5a944fd5a/devpi-2.0.2.tar.gz"
 
 # Frozen versions of "devpi" requirements
-DEVPI_FREEZE="devpi-client==2.6.3 devpi-common==3.0.0 devpi-web==3.1.0 requests==2.10.0"
+DEVPI_FREEZE="devpi-client==4.0.1 devpi-common==3.2.1 devpi-web==3.2.2 requests==2.18.4"
 
 # Add plugin packages, as a space- or comma-separated list
-DEVPI_PLUGINS="devpi-findlinks==1.0.1"
+DEVPI_PLUGINS="devpi-findlinks==2.0.0"
 
 PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
 DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')

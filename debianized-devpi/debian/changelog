@@ -1,3 +1,14 @@
+devpi (4.4.0-1~xenial) xenial; urgency=medium
+
+  * Upstream release: 4.4.0
+  * devpi-client: 4.0.1
+  * devpi-common: 3.2.1
+  * devpi-web: 3.2.2
+  * requests: 2.18.4
+  * devpi-findlinks: 2.0.0
+
+ -- Juergen Hermann <jh@web.de>  Mon, 05 Mar 2018 12:44:41 +0100
+
 devpi (4.0.0-3~xenial) xenial; urgency=high
 
   * Move installation root directory to "/opt/venvs" (fix
