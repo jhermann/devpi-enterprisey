@@ -20,8 +20,8 @@ PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "pip>8" --preinstall "wh
 
 # Version of "devpi" meta package
 DEVPI_SERVER_VERSION=4.7.1
-DEVPI_SERVER_PYPI="https://pypi.python.org/"
-DEVPI_URL=$(DEVPI_SERVER_PYPI)$(shell curl -sL $(DEVPI_SERVER_PYPI)simple/devpi-server/ \
+DEVPI_SERVER_PYPI="https://pypi.org/"
+DEVPI_URL=$(shell curl -sL $(DEVPI_SERVER_PYPI)simple/devpi-server/ \
     | grep devpi-server-$(DEVPI_SERVER_VERSION).tar.gz | cut -f2 -d'"' | cut -f1 -d\# | sed -re 's~^[./]+~~')
 
 # Use a specific repo to build the package?
