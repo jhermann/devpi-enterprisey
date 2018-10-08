@@ -14,7 +14,7 @@
 export DH_VIRTUALENV_INSTALL_ROOT=/opt/venvs
 
 # Packages to install before the main project
-PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "pip>8" --preinstall "wheel" \
+PREINSTALL=--preinstall "setuptools>=17.1" --preinstall "wheel" \
     --preinstall pytest --preinstall webtest
 # --preinstall 'requests[security]' # for Python before 2.7.9, e.g. on Ubuntu Trusty
 
@@ -34,9 +34,11 @@ DEVPI_FREEZE="devpi-client==4.1.0 devpi-common==3.3.1 devpi-web==3.4.1 requests=
 # Add plugin packages, as a space- or comma-separated list
 DEVPI_PLUGINS="devpi-findlinks==2.0.0"
 
-PACKAGE_NAME=$(shell head -n1 debian/changelog | cut -f1 -d" ")
-DEB_VERSION=$(shell head -n1 debian/changelog | sed -r 's/^$(PACKAGE_NAME)..([.0-9a-z]+).*$$/\1/')
-DH_VENV_ARGS=--with python-virtualenv --setuptools --python /usr/bin/python3 $(PYPI_URL) $(PREINSTALL) #-v
+PACKAGE=$(shell dh_listpackages)
+VERSION=$(shell parsechangelog | grep ^Version: | sed -re 's/[^0-9]+([^-]+).*/\1/')
+DH_VENV_ARGS=--setuptools --upgrade-pip --python /usr/bin/python3 $(PYPI_URL) $(PREINSTALL) #-v
+DH_VENV_DIR=debian/$(PACKAGE)$(DH_VIRTUALENV_INSTALL_ROOT)/$(PACKAGE)
+
 
 clean:
 	test ! -d debian/sdist || rm -rf debian/sdist
@@ -49,7 +51,11 @@ build-arch:
 	mkdir -p debian/sdist
 	tar -xz -C debian/sdist --strip-components=1 --exclude '*.egg-info' -f debian/*.tar.gz
 	echo $(DEVPI_FREEZE) $(DEVPI_PLUGINS) | tr ' ,' '\n\n' >>debian/sdist/requirements.txt
-	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist
+	dh $@ --with python-virtualenv --sourcedir debian/sdist
 
 %:
-	dh $@ $(DH_VENV_ARGS) --sourcedir debian/sdist
+	dh $@ --with python-virtualenv --sourcedir debian/sdist
+
+override_dh_virtualenv:
+	dh_virtualenv $(DH_VENV_ARGS) --sourcedir debian/sdist
+	$(DH_VENV_DIR)/bin/python -m pip uninstall -y virtualenv pip wheel
