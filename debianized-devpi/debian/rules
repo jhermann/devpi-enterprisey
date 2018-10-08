@@ -59,3 +59,6 @@ build-arch:
 override_dh_virtualenv:
 	dh_virtualenv $(DH_VENV_ARGS) --sourcedir debian/sdist
 	$(DH_VENV_DIR)/bin/python -m pip uninstall -y virtualenv pip wheel
+	-rm -rf $(DH_VENV_DIR)/lib/python*/site-packages/pyramid/tests
+	-rm -rf $(DH_VENV_DIR)/lib/python*/site-packages/test_devpi_server
+	-rm -rf $(DH_VENV_DIR)/lib/python*/site-packages/setuptools
