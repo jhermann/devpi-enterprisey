@@ -54,12 +54,13 @@ So once the package is installed as shown in the previous section,
 use these commands as `root` to configure and start your `devpi` server:
 
 ```sh
-apt-get install supervisor
+apt-get install -y supervisor
 addgroup devpi
 adduser devpi --ingroup devpi --home /var/lib/devpi --system --disabled-password
 ( export LOGNAME=devpi && cd /tmp && /usr/sbin/devpi-server --gen-config )
 cp /tmp/gen-config/supervisor-devpi.conf /etc/supervisor/conf.d/devpi-server.conf
 echo >>/etc/supervisor/conf.d/devpi-server.conf "directory = /var/lib/devpi"
+su - devpi -s /bin/bash -c "/usr/sbin/devpi-server --init"
 service supervisor start
 supervisorctl update
 supervisorctl tail -f devpi-server
