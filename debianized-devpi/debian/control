@@ -2,7 +2,7 @@ Source: devpi
 Section: contrib/python
 Priority: extra
 Maintainer: Holger Krekel <devpi-dev@googlegroups.com>
-Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.11), curl, tar, gzip
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 1.0), curl, tar, gzip
 Standards-Version: 3.9.5
 Homepage: http://doc.devpi.net/latest/
 
